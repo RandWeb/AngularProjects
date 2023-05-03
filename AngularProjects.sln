@@ -1,5 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComponentsAndBinding", "ComponentsAndBinding", "{05DED56A-82D7-48EA-B65E-DA2945AB79B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
