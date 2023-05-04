@@ -12,11 +12,11 @@ export class CockpitComponent {
   @Output() serverCreated = new EventEmitter<{ serverName: string, serverContent: string }>();
   @Output('bpCreated') bluePrintCreated = new EventEmitter<{ serverName: string, serverContent: string }>();
 
-  onAddServer() {
-    this.serverCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent})
+  onAddServer(serverName:string) {
+    this.serverCreated.emit({serverName: serverName, serverContent: this.newServerContent})
   }
 
-  onAddBlueprint() {
-    this.bluePrintCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent})
+  onAddBlueprint(serverName:string) {
+    this.bluePrintCreated.emit({serverName: serverName, serverContent: this.newServerContent})
   }
 }

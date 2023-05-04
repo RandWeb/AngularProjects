@@ -10,16 +10,9 @@ export class AppComponent {
   constructor() {
   }
 
-  serverElements = [
-    {
-      type: 'Server',
-      name: 'Test Server',
-      content: 'Just a test'
-    }
-  ];
+  serverElements:Array<{type: string, name: string, content:string }> = [];
 
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
-    // @ts-ignore
     this.serverElements.push({
       type: 'server',
       name: serverData.serverName,
