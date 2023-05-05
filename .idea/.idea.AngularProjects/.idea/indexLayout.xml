@@ -4,6 +4,7 @@
     <attachedFolders>
       <Path>ComponentAndBinding</Path>
       <Path>RecipeBook</Path>
+      <Path>Services</Path>
     </attachedFolders>
     <explicitIncludes />
     <explicitExcludes />
