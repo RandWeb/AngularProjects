@@ -1,16 +1,18 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
+  <div class="row d-flex">
+    <div class="col-xs-12 align-content-center">
       <button
-        class="btn btn-primary"
+        class="btn btn-primary mt-5"
         (click)="onlyAdd = !onlyAdd"
       >only show add numbers
       </button>
-      <br> <br>
+      <br><br>
       <ul class="list-group">
         <div *ngIf="onlyAdd">
           <li
             class="list-group-item"
+            [ngClass]="{odd:number % 2 !== 0}"
+            [ngStyle]="{backgroundColor:number %2 !== 0 ? 'yellow':'transparent'}"
             *ngFor="let number of oddNumbers;"
           >
             {{number}}
@@ -18,7 +20,9 @@
         </div>
         <div *ngIf="!onlyAdd">
           <li
-            class="list-group-item"
+            class="list-group-item card-body"
+            [ngClass]="{odd:number % 2 !== 0}"
+            [ngStyle]="{backgroundColor:number %2 !== 0 ? 'yellow':'transparent'}"
             *ngFor="let number of evenNumbers;"
           >
             {{number}}
