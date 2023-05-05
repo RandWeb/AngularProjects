@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row d-flex">
+    <div class="col-xs-12 align-content-center">
+      <button
+        class="btn btn-primary mt-5"
+        (click)="onlyAdd = !onlyAdd"
+      >only show add numbers
+      </button>
+      <br><br>
+      <ul class="list-group">
+        <div *ngIf="onlyAdd">
+          <li
+            class="list-group-item"
+            [ngClass]="{odd:number % 2 !== 0}"
+            [ngStyle]="{backgroundColor:number %2 !== 0 ? 'yellow':'transparent'}"
+            *ngFor="let number of oddNumbers;"
+          >
+            {{number}}
+          </li>
+        </div>
+        <ng-template [ngIf]="!onlyAdd">
+          <li
+            class="list-group-item card-body"
+            [ngClass]="{odd:number % 2 !== 0}"
+            [ngStyle]="{backgroundColor:number %2 !== 0 ? 'yellow':'transparent'}"
+            *ngFor="let number of evenNumbers;"
+          >
+            {{number}}
+          </li>
+        </ng-template>
+      </ul>
+      <p class="mt-2 p-2" BasicHighlight>style with basic directive</p>
+      <div [ngSwitch]="value" class="row bg-info text-danger m-1 text-center">
+        <span *ngSwitchCase="5">5</span>
+        <span *ngSwitchCase="6">6</span>
+        <span *ngSwitchCase="7">7</span>
+        <span *ngSwitchCase="8">8</span>
+        <span *ngSwitchCase="9">9</span>
+        <span *ngSwitchCase="14">14</span>
+      </div>
+      <p class="mt-2 p-2" [BetterHighlight]="'aqua'" defaultColor="yellow">style with better directive</p>
+    </div>
+    <div
+      class="d-flex flex-column align-content-center justify-content-center"
+      *Unless="onlyAdd"
+    >
+      <div
+        class="list-group-item m-2 rounded-2 text-center p-2"
+        [ngClass]="{odd:number % 2 !== 0}"
+        [ngStyle]="{backgroundColor:number %2 !== 0 ? 'yellow':'transparent'}"
+        *ngFor="let number of oddNumbers;"
+      >
+        {{number}}
+      </div>
+    </div>
+  </div>
+</div>

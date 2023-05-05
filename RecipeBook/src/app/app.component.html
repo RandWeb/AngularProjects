@@ -1,7 +1,10 @@
+<header (featureSelected)="onNavigate($event)"></header>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>i'm working!</h2>
+      <recipe *ngIf="featureLoaded==='recipe'"></recipe>
+      <shopping-list *ngIf="featureLoaded==='shopping-list'"></shopping-list>
     </div>
   </div>
 </div>

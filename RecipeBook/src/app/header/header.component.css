@@ -1,0 +1,6 @@
+﻿.nav-item a{
+  cursor: pointer;
+}
+.dropdown-menu{
+  right: 20px;
+}
