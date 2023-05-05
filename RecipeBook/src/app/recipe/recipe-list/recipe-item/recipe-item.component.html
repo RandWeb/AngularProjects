@@ -1,1 +1,18 @@
-<p>recipe-item works!</p>
+<a
+  href="#"
+  class="list-group-item list-group-item-secondary d-flex justify-content-between p-3 rounded-2 mt-4"
+  (click)="onSelect()">
+  <div class="align-content-start">
+    <h4 class="list-group-item-heading">
+      {{recipe.name}}
+    </h4>
+    <p class="list-group-item-">{{recipe.description}}</p>
+  </div>
+  <div class="align-content-end">
+    <img
+      src="{{recipe.imagePath}}"
+      alt="{{recipe.name}}"
+      class="img-fluid rounded-2"
+      style="max-height: 100px;">
+  </div>
+</a>
