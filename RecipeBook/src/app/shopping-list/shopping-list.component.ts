@@ -10,9 +10,9 @@ export class ShoppingListComponent {
   constructor() {
   }
 
-  ingredients:Ingredient[]=[
-    new Ingredient("Apples",5),
-    new Ingredient("Tomato",10)
-  ];
+  ingredients: Ingredient[] = [];
 
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.unshift(ingredient);
+  }
 }
