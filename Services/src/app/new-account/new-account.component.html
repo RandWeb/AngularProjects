@@ -7,7 +7,7 @@
         class="form-control"
         #accountName>
     </div>
-    <div class="form-group">
+    <div class="form-group mt-1">
       <select class="form-control" #status>
         <option value="active">Active</option>
         <option value="inactive">Inactive</option>
@@ -15,7 +15,7 @@
       </select>
     </div>
     <button
-      class="btn btn-primary"
+      class="btn btn-primary mt-2"
       (click)="onCreateAccount(accountName.value, status.value)">
       Add Account
     </button>
