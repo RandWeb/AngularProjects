@@ -18,7 +18,6 @@ export class DropdownDirective {
     }else {
       this.renderer.removeClass(ul,'show')
     }
-    console.log(ul)
   }
 
 }

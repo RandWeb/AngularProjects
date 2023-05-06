@@ -1,5 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {LoggingService} from "../logging.service";
+import {Component} from '@angular/core';
 import {AccountService} from "../account.service";
 
 @Component({
@@ -12,10 +11,14 @@ export class NewAccountComponent {
 
   constructor(
     private accountService: AccountService) {
+
+    this.accountService.statusUpdated.subscribe((status) => {
+      alert("new status is : " + status);
+    })
   }
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountService.addAccount(accountName, accountStatus);
-   // this.loggingService.logStatusChange(accountStatus)
+    // this.loggingService.logStatusChange(accountStatus)
   }
 }

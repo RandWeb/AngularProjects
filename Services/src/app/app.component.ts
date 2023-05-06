@@ -8,7 +8,7 @@ import {LoggingService} from "./logging.service";
   styleUrls: ['./app.component.css'],
   providers: []
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   accounts: { name: string, status: string }[] = [];
 
   constructor(private accountService: AccountService) {
